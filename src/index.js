@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   I18nManager,
   ViewPropTypes,
+  TextInput as NativeTextInput
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
@@ -210,7 +210,7 @@ class SmoothPinCodeInput extends Component {
             })
           }
         </View>
-        <TextInput
+        <NativeTextInput
           disableFullscreenUI={disableFullscreenUI}
           value={value}
           ref={this.inputRef}
@@ -310,7 +310,7 @@ SmoothPinCodeInput.propTypes = {
   onBlur: PropTypes.func,
   keyboardType: PropTypes.string,
   editable: PropTypes.bool,
-  inputProps: PropTypes.exact(TextInput.propTypes),
+  inputProps: PropTypes.exact(NativeTextInput.propTypes),
 };
 
 export default SmoothPinCodeInput;
